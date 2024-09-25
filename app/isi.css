@@ -1,0 +1,291 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d9cfcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 375px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Info Table Styles */
+.info-table {
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #363636;
+    margin-bottom: -7px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.info-cell {
+    flex: 1;
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Status Styles */
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.toggle-switch {
+    position: relative;
+}
+
+.toggle-switch input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggle-switch label {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-switch label::after {
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked + label {
+    background-color: #007bff;
+}
+
+.toggle-switch input:checked + label::after {
+    left: calc(100% - 2.5px);
+    transform: translateX(-100%);
+}
+
+/* Notes Styles */
+.notes {
+    margin-bottom: 20px;
+}
+
+.notes h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.notes textarea {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #363636;
+    color: white;
+}
+
+/* Download Styles */
+.download {
+    margin-bottom: 20px;
+}
+
+.download h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.download-buttons button {
+    padding: 10px 60px;
+    background-color: #696968;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.download-buttons button:hover {
+    background-color: #545554;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #545554;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer .nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+footer .nav-icon ion-icon {
+    font-size: 20px;
+    color: #545554;
+}
+
+footer .nav-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        border-radius: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .info-cell {
+        font-size: 12px;
+    }
+
+    .status h3, .notes h3, .download h3 {
+        font-size: 16px;
+    }
+
+    .notes textarea {
+        font-size: 12px;
+    }
+
+    .download-buttons button {
+        font-size: 12px;
+    }
+
+    footer .nav-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    footer .nav-icon ion-icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    header {
+        margin-bottom:44px;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        border-radius: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .info-cell {
+        font-size: 10px;
+    }
+
+    .status h3, .notes h3, .download h3 {
+        font-size: 14px;
+    }
+
+    .notes textarea {
+        font-size: 10px;
+        width: 93%;
+    }
+
+    .download-buttons button {
+        font-size: 10px;
+    }
+
+    footer .nav-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .nav-icon ion-icon {
+        font-size: 16px;
+    }
+}
