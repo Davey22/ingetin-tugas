@@ -1,9 +1,8 @@
 "use client";
 
-import '../../isi.css'
+import '../../isi.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-
 
 export default function TugasDetail() {
   const { ids } = useParams(); // Ambil ids dari URL
